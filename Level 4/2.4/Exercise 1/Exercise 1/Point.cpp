@@ -35,3 +35,11 @@ void Point::Y(double y) {
 Point Point::operator-() const {
     return Point(-m_X, -m_Y);
 }
+
+Point Point::operator*(double factor) const {
+    return Point(m_X * factor, m_Y * factor);
+}
+
+Point Point::operator+(const Point& p) const {
+    return Point(m_X + p.m_X, m_Y + p.m_Y);
+}

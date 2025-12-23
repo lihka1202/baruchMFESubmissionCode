@@ -13,8 +13,18 @@ int main(int argc, const char * argv[]) {
     double x, y;
     std::cout << "Please enter the coordinates of the point" << std::endl;
     std::cin >> x >> y;
+    
+    // Negated
     Point tester = Point(x,y);
     Point negated = -tester;
-    std::cout << "This is the negated version of the tester point " << negated.X() << " " << negated.Y() << std::endl;
+    negated.printPoint();
+    // Scaled
+    Point scaled = tester * 2;
+    scaled.printPoint();
+    
+    // Add new pointer
+    Point added = tester + tester;
+    added.printPoint();
     return 0;
+    
 }
