@@ -33,4 +33,8 @@ public:
     Point operator + (const Point& p) const;
     
     bool operator == (const Point& p) const;
+    
+    Point& operator = (const Point& source);
+    
+    Point& operator *= (double factor);
 };

@@ -31,6 +31,20 @@ int main(int argc, const char * argv[]) {
     std::string finalStatus = scaled == added ? "true" : "false";
     std::cout << "Check if scaled and added are the same: " << finalStatus << std::endl;
     
+    // Assign a new point --> Default
+    Point assignment;
+    std::cout << "Assignment Original State: \n";
+    assignment.printPoint();
+    
+    assignment = tester;
+    std::cout << "Assignment Final State: \n";
+    assignment.printPoint();
+    
+    // Double here then print
+    assignment*=2;
+    std::cout << "Assignment Doubled State (Doubled by a factor of 2 in code): \n";
+    assignment.printPoint();
+    
     return 0;
     
 }

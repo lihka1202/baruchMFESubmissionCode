@@ -47,3 +47,15 @@ Point Point::operator+(const Point& p) const {
 bool Point::operator==(const Point &p) const {
     return (p.m_X == this->m_X) && (p.m_Y == this->m_Y);
 }
+
+Point& Point::operator=(const Point &source) {
+    this->m_X = source.m_X;
+    this->m_Y = source.m_Y;
+    return *this;
+}
+
+Point& Point::operator*=(double factor) {
+    this->m_X *= factor;
+    this->m_Y *= factor;
+    return *this;
+}
