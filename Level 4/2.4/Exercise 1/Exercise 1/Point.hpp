@@ -31,4 +31,6 @@ public:
     Point operator * (double factor) const;
     
     Point operator + (const Point& p) const;
+    
+    bool operator == (const Point& p) const;
 };

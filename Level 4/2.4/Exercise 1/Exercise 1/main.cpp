@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include "Point.hpp"
+#include "string"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -25,6 +26,11 @@ int main(int argc, const char * argv[]) {
     // Add new pointer
     Point added = tester + tester;
     added.printPoint();
+    
+    // test if 2 points are the same
+    std::string finalStatus = scaled == added ? "true" : "false";
+    std::cout << "Check if scaled and added are the same: " << finalStatus << std::endl;
+    
     return 0;
     
 }
