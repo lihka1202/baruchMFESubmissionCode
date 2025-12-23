@@ -1,0 +1,53 @@
+//
+//  Point.cpp
+//  Exercise 2
+//
+//  Created by Akhil Muthya Narayanachary on 23/10/25.
+//
+
+#include "Point.hpp"
+#include "sstream"
+#include "cmath"
+
+
+// Default Constructor
+Point::Point() {
+    m_x = 0.0;
+    m_y = 0.0;
+}
+
+Point::~Point() {
+    // Leave empty
+}
+
+double Point::GetX() {
+    return m_x;
+}
+
+double Point::GetY() {
+    return m_y;
+}
+
+void Point::SetX(double newX) {
+    m_x = newX;
+}
+
+void Point::SetY(double newY) {
+    m_y = newY;
+}
+
+std::string Point::ToString() {
+    std::ostringstream oss;
+    oss << "Point(" << m_x << ", " << m_y << ")";
+    return oss.str();
+}
+
+// Distance from Origin
+double Point::DistanceOrigin() {
+    return std::sqrt( (this->m_x * this->m_x) + (this->m_y * this->m_y) );
+}
+
+// Distance from another point
+double Point::Distance(Point p) {
+    return std::sqrt((this->m_x - p.GetX())*(this->m_x - p.GetX()) + (this->m_y - p.GetY())*(this->m_y - p.GetY()));
+}
